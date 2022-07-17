@@ -1,6 +1,6 @@
 {
   "name": "mapped-file",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A utility for working with files using source mapped locations",
   "main": "dist/commonjs/index.js",
   "module": "dist/es/index.js",
