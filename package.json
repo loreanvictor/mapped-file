@@ -1,0 +1,52 @@
+{
+  "name": "mapped-file",
+  "version": "0.0.1",
+  "description": "A utility for working with files using source mapped locations",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/es/index.d.ts",
+  "files": [
+    "dist/commonjs",
+    "dist/es"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "build:commonjs": "tsc -p conf/typescript/commonjs.json",
+    "build:es": "tsc -p conf/typescript/es.json",
+    "build": "npm run build:commonjs && npm run build:es",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loreanvictor/mapped-file.git"
+  },
+  "keywords": [
+    "file",
+    "source-maps",
+    "string"
+  ],
+  "author": "Eugene Ghanizadeh Khoub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loreanvictor/mapped-file/issues"
+  },
+  "homepage": "https://github.com/loreanvictor/mapped-file#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@sindresorhus/tsconfig": "^3.0.1",
+    "@types/jest": "^28.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "babel-jest": "^28.1.3",
+    "eslint": "^8.20.0",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
