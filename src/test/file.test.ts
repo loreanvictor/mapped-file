@@ -74,6 +74,8 @@ describe(File, () => {
     expect(file.offset({ line: 0, character: 0 })).toBe(0)
     expect(file.offset({ line: 0, character: 1 })).toBe(1)
     expect(file.offset({ line: 1, character: 2 })).toBe(8)
+
+    expect(file.lines[3]![2]).toBe(file.contents[file.offset({ line: 3, character: 2 })])
   })
 
   test('handles new lines properly.', () => {
